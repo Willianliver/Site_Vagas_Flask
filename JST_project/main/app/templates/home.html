@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %} {{super()}} - Home {% endblock %}
+{% block topview%}
+<center>
+  <div class="alert alert-dark" role="alert">
+<p class="h1" style="color:#3a0d66;" >Job Search Tech</p>
+  <p class="h4">A solução para seu desemprego</p>
+  </div>
+</center>
+
+<div class="shadow p-3 mb-5 bg-body rounded" style="margin-top:50px;">
+<img src="{{ url_for('static',filename='images/banner.png') }}" class="img-fluid" alt="...">
+</div>
+
+
+<center>
+  <p class="h1" style="color:#3a0d66;" >Qual vaga você procura?</p>
+<form action="/search" method="post" >
+  <input  style="margin-top:20px;" class="form-control form-control-lg" type="text" placeholder="Procure sua vaga aqui" id="search_data" name="search_data" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-2" type="submit">Pesquisar</button>
+</form>
+</center>
+
+{%endblock%}
+
+{% block content %}
+
+<div class="shadow p-3 mb-5 bg-body rounded"><p class="h4">Confira nossas vagas</p>
+<div class="d-flex position-relative">
+  <img src="{{ url_for('static',filename='images/temos vagas 2.png') }}"class="flex-shrink-0 me-3" alt="...">
+  <!-- div vagas -->
+  <div class="card" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/cube_sistemas.jpeg') }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Cube Sistems</h5>
+    <p class="card-text">Nós da Cube Sistems procuranos desenvolver plataformas e softwares para facilitar o seu dia a dia. Venha conferir nossas vagas</br></p>
+  </div>
+</div>
+    <div class="card" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/aviaras.jpeg') }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Aviarás</h5>
+    <p class="card-text">A Aviarás está topo mercado a vinte anos proporcionando sistemas que priorizam a acessibilidade e facilidade com a interação do usuario</p>
+  </div>
+</div>
+    <div class="card" style="width: 18rem;">
+  <img src="{{ url_for('static',filename='images/new_tech.jpeg') }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">New Tech</h5>
+    <p class="card-text">a new tech é uma empresa unica que trabalha com sistemas inovadores, desenvolvendo sistemas de segurança para diversas empresas no mundo visibilizando sempre a segurança em primeiro lugar</p>
+  </div>
+</div>
+</div>
+</div>
+{%endblock%}

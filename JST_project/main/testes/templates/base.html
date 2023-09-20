@@ -1,0 +1,30 @@
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'aos.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'bootstrap-grid.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'bootstrap-reboot.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'bootstrap-utilities.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'tiny-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= '/bootstrap/mixins/_text-truncate.css')}}">
+
+    <title>{%block title%} title {%endblock%}</title>
+
+
+    {% block content %}
+    <!--
+        <script type = "text/javascript"
+         src = "{{ url_for('static', filename = 'js/bootstrap.bundle.min.js') }}" ></script>
+
+        <script src="js/bootstrap.bundle.min.js">
+
+        <script src="js/tiny-slider.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+        -->
+    {% endblock %}
+</head>
